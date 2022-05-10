@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "ListCustomer";
+    var list = ViewBag.list;
+}
+
+<h2>Danh sách khách hàng</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> Mã </th>
+            <th> Họ tên</th>
+            <th> Địa chỉ</th>
+            <th> Năm sinh</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in list)
+        {
+            <tr>
+                <td>@item.CustomerId</td>
+                <td>@item.FirstName @item.LastName </td>
+                <td>@item.Address</td>
+                <td>@item.YearOfBirth</td>
+            </tr>
+        }
+    </tbody>
+</table>

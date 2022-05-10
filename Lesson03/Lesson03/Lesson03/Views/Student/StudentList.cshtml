@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "StudentList";
+    var stt = 0;
+}
+
+<h2>@ViewBag.msg</h2>
+<hr/>
+@foreach (var item in ViewBag.names)
+{
+    stt++;
+    <p> @stt => @item</p>
+}
+
